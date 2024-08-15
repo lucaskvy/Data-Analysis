@@ -4,10 +4,10 @@ def calculate(list):
     if len(list) != 9:
         raise ValueError("List must contain nine numbers.")
     
-    # Converte a lista em uma matriz 3x3 do Numpy
+    #converte a lista em uma matriz 3x3 do Numpy
     matrix = np.array(list).reshape(3, 3)
     
-    # Calcula as estatísticas ao longo dos eixos 0 (colunas) e 1 (linhas) e da matriz nivelada (flattened)
+    #calcula as estatísticas ao longo dos eixos 0 (colunas) e 1 (linhas) e da matriz nivelada (flattened)
     mean_axis1 = np.mean(matrix, axis=0).tolist()
     mean_axis2 = np.mean(matrix, axis=1).tolist()
     mean_flattened = np.mean(matrix).tolist()
@@ -33,7 +33,7 @@ def calculate(list):
     sum_axis2 = np.sum(matrix, axis=1).tolist()
     sum_flattened = np.sum(matrix).tolist()
 
-    # Cria o dicionário com as estatísticas
+    #cria o dicionário com as estatísticas
     calculations = {
         'mean': [mean_axis1, mean_axis2, mean_flattened],
         'variance': [variance_axis1, variance_axis2, variance_flattened],
